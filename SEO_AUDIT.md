@@ -1,54 +1,79 @@
-# Funngro Website Revamp — SEO Audit Report
+# Funngro Website – SEO Audit Report
 
-## Project scope
-Two-page responsive redesign concept:
-- `teen.html` — Teenlancer / young participant audience
-- `companies.html` — companies and brand marketing teams
+**Project:** Funngro Teen and Company Pages Redesign  
+**Deployment:** GitHub Pages
 
-The content and positioning were informed by the public Funngro homepage and its official `/for-brands`, `/about`, `/faq`, and `/trust` pages. This is an independent project concept, not an official Funngro website.
+## 1. Deployed Website URLs
 
-## On-page SEO checklist
+- **Teen Page:** https://yogavardhan.github.io/funngro-website/
+- **Company Page:** https://yogavardhan.github.io/funngro-website/companies.html
 
-| Check | Teen page | Companies page | Status |
-|---|---|---|---|
-| Unique page title | Earn Online with Real Brand Projects | Youth Marketing, Brand Campaigns & UGC | Implemented |
-| Meta description | Teen project opportunities | Brand campaign solutions | Implemented |
-| Semantic HTML | Header, nav, main, section, article, footer | Header, nav, main, section, article, footer | Implemented |
-| Heading hierarchy | One H1, section H2s, card H3s | One H1, section H2s, card H3s | Implemented |
-| Mobile viewport | Responsive viewport and breakpoints | Responsive viewport and breakpoints | Implemented |
-| Internal links | Links to company page and page sections | Links to teen page and page sections | Implemented |
-| Image alt text | No decorative stock imagery used | No decorative stock imagery used | N/A |
-| Structured data | WebPage JSON-LD | WebPage JSON-LD | Implemented |
-| Open Graph metadata | Title and description | Title and description | Implemented |
-| Canonical URL | Placeholder domain | Placeholder domain | Must update |
-| XML sitemap / robots | Included in project | Included in project | Included; update domain |
+## 2. PageSpeed Insights Results
 
-## Technical SEO and performance
-- CSS and JavaScript are shared and lightweight; no external framework or font dependency.
-- Navigation uses semantic links and an accessible mobile menu button.
-- Layout adapts at tablet and mobile breakpoints.
-- No third-party images are loaded, reducing external requests.
-- FAQ content uses native disclosure elements.
-- The company enquiry form opens the visitor's email client; it is not a server-backed lead form.
+| Category | Teen Page | Company Page |
+|---|---:|---:|
+| Performance | 100 | 100 |
+| Accessibility | 100 | 100 |
+| Best Practices | 100 | 77 |
+| SEO | 100 | 100 |
 
-## Keyword themes
-**Teen page:** online projects for students, teenlancer opportunities, brand campaigns, content creation projects, online skills for young people.
+**Agentic Browsing:** 2/2 (reported result).
 
-**Company page:** youth marketing campaigns India, brand promotion, user-generated content (UGC), product sampling, referral campaigns, youth audience research, app testing.
+## 3. Audit Findings
 
-Use keywords naturally. Do not repeat keywords unnaturally or promise guaranteed earnings or campaign results.
+### Teen Page
+The Teen page achieved 100 in all four Lighthouse categories:
+- Performance
+- Accessibility
+- Best Practices
+- SEO
 
-## Required before publishing
-1. Replace `https://example.com/teen.html` and `https://example.com/companies.html` in canonical tags with the final public URLs.
-2. Update `sitemap.xml` with the final domain and deployed paths.
-3. Update `robots.txt` sitemap URL to the final domain.
-4. Host the pages on HTTPS and verify both URLs return HTTP 200.
-5. Test on real Android/iOS screen sizes and current Chrome/Safari.
-6. Run Lighthouse (mobile) and record Performance, Accessibility, Best Practices and SEO scores after deployment.
-7. Validate structured data with Google's Rich Results Test / Schema Markup Validator. WebPage schema is informational and does not guarantee a rich result.
-8. Submit the sitemap in Google Search Console and inspect both URLs.
-9. Check title/description rendering, canonical tags, broken links, form behaviour and keyboard navigation.
-10. Confirm brand permission before presenting the site as an official Funngro property or using official logos/assets.
+### Company Page
+The Company page achieved:
+- Performance: 100
+- Accessibility: 100
+- Best Practices: 77
+- SEO: 100
 
-## Audit limitations
-This is a source-code and content-level audit. No live crawl, Lighthouse run, Search Console verification, backlink analysis, ranking check or production deployment has been performed. Scores are intentionally not fabricated. Canonical URLs are placeholders until a domain is selected.
+**Best Practices warning:**
+
+PageSpeed Insights reported:
+
+"Does not use HTTPS – 1 insecure request found."
+
+The identified URL was:
+
+`mailto:hello@funngro.com`
+
+The request resolution was reported as "Allowed with warning".
+
+A `mailto:` link opens the visitor's email application. It is not an HTTP resource and does not, by itself, indicate insecure HTTP delivery or mixed content.
+
+**Recommendation:** Retain the email contact link because it provides useful functionality. Document this finding as a Lighthouse warning associated with the email URI.
+
+## 4. Overall Assessment
+
+Both pages achieved 100 in Performance, Accessibility and SEO.
+
+The Teen page achieved a perfect score across all four Lighthouse categories. The Company page received 77 in Best Practices because of the reported email URI warning.
+
+Overall, the results indicate strong performance across the tested categories.
+
+## 5. Recommendations
+
+1. Continue serving both pages over HTTPS.
+2. Retain the working email contact link.
+3. Re-run PageSpeed Insights after future website changes.
+4. Review any new audit warnings individually.
+5. Retain screenshots of both PageSpeed reports as project evidence.
+
+## 6. Audit Scope and Limitations
+
+This report is based on PageSpeed Insights results provided by the project owner. It is not an independent full technical SEO audit.
+
+Google Search Console indexing, backlinks, search rankings, analytics configuration and field Core Web Vitals have not been independently verified.
+
+---
+
+**Project:** Funngro Website Redesign  
+**Hosting:** GitHub Pages
